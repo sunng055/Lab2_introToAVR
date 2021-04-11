@@ -43,6 +43,9 @@ unsigned char tempA3 = 0x00;
 	if(tempA3 == 0x08) {
 	cntavail = cntavail - 1;
 }
+	if(cntavail == 0) {
+	cntavail = 0x80;
+}
 	PORTC = cntavail;
 	cntavail = 4;
     }
