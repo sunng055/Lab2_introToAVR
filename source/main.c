@@ -44,6 +44,7 @@ unsigned char tempA3 = 0x00;
 	cntavail = cntavail - 1;
 }
 	PORTC = cntavail;
+	cntavail = 4;
     }
     return 1;
 }
