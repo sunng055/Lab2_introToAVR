@@ -18,7 +18,7 @@ DDRA = 0x00;
 DDRC = 0xFF;
 PORTA = 0xFF;
 PORTC = 0x00;
-unsigned char cntavail = 0;
+unsigned char cntavail = 4;
 unsigned char tempA0 = 0x00;
 unsigned char tempA1 = 0x00;
 unsigned char tempA2 = 0x00;
@@ -32,16 +32,16 @@ unsigned char tempA3 = 0x00;
 	tempA3 = PINA & 0x08;
 	
 	if(tempA0 == 0x01) {
-	cntavail = cntavail + 1;
+	cntavail = cntavail - 1;
 }
 	if(tempA1 == 0x02) {
-	cntavail = cntavail + 1;
+	cntavail = cntavail - 1;
 }
 	if(tempA2 == 0x04) {
-	cntavail = cntavail + 1;
+	cntavail = cntavail - 1;
 }
 	if(tempA3 == 0x08) {
-	cntavail = cntavail + 1;
+	cntavail = cntavail - 1;
 }
 	PORTC = cntavail;
     }
