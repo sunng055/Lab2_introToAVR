@@ -32,16 +32,16 @@ unsigned char tempA3 = 0x00;
 	tempA3 = PINA & 0x08;
 	
 	if(tempA0 == 0x01) {
-	cntavail++;
+	cntavail = cntavail + 1;
 }
 	if(tempA1 == 0x02) {
-	cntavail++;
+	cntavail = cntavail + 1;
 }
 	if(tempA2 == 0x04) {
-	cntavail++;
+	cntavail = cntavail + 1;
 }
 	if(tempA3 == 0x08) {
-	cntavail++;
+	cntavail = cntavail + 1;
 }
 	PORTC = cntavail;
     }
