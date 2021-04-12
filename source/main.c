@@ -51,7 +51,7 @@ unsigned char tempAA6 = 0x00;
 	PORTC = 0x3F;
 }
 	if((tempAA4 == 0x10) && (tempAA5 == 0x20) && !(tempAA6 == 0x40)) {
-	PORTC = PORTC | 0x80;
+	PORTC = (PORTC | 0x80);
 }	
     }
     return 1;
