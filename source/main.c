@@ -20,11 +20,15 @@ PORTA = 0xFF;
 PORTC = 0x00;
 
 unsigned char tempA = 0x00;
-unsigned char tempAA = 0x00;
+unsigned char tempAA4 = 0x00;
+unsigned char tempAA5 = 0x00;
+unsigned char tempAA6 = 0x00;
     /* Insert your solution below */
     while (1) {
 	tempA = PINA & 0x0F;
-	tempAA = PINA & 0xF0;
+	tempAA4 = PINA & 0x10;
+	tempAA5 = PINA & 0x20;
+	tempAA6 = PINA & 0x40;
 	if(tempA == 0x00) {
 	PORTC = 0x40;
 }		
@@ -46,7 +50,7 @@ unsigned char tempAA = 0x00;
 	if((tempA == 0x0D) || (tempA == 0x0E) ) {
 	PORTC = 0x3F;
 }
-	if((tempAA == 0x10) && (tempAA == 0x20) && !(tempAA == 0x40)) {
+	if((tempAA4 == 0x10) && (tempAA5 == 0x20) && !(tempAA6 == 0x40)) {
 	PORTC = PORTC | 0x80;
 }	
     }
