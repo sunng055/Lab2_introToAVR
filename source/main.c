@@ -47,7 +47,7 @@ unsigned char tempAA6 = 0x00;
 	if((tempA == 0x0A) || (tempA == 0x0B) || (tempA == 0x0C)) {
 	PORTC = 0x3E;
 }
-	if((tempA == 0x0D) || (tempA == 0x0E) ) {
+	if((tempA == 0x0D) || (tempA == 0x0E) || (tempA == 0x0F) ) {
 	PORTC = 0x3F;
 }
 	if((tempAA4 == 0x10) && (tempAA5 == 0x20) && !(tempAA6 == 0x40)) {
