@@ -47,7 +47,7 @@ unsigned char tempAA = 0x00;
 	PORTC = 0x3F;
 }
 	if((tempAA == 0x10) && (tempAA == 0x20) && !(tempAA == 0x40)) {
-	PORTC = PORTC || 0x80;
+	PORTC = PORTC | 0x80;
 }	
     }
     return 1;
