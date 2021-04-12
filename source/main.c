@@ -104,6 +104,7 @@ unsigned char tempB7 = 0x00;
 	count1s = count1s + 1;
 }	
 	PORTC = count1s;
+	count1s = 0;
     }
     return 1;
 }
