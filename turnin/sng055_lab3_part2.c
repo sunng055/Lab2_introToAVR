@@ -22,7 +22,7 @@ PORTC = 0x00;
 unsigned char tempA = 0x00;
     /* Insert your solution below */
     while (1) {
-	tempA = PINA;
+	tempA = PINA & 0x0F;
 	if(tempA == 0x00) {
 	PORTC = 0x40;
 }		
